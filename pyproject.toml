@@ -1,0 +1,18 @@
+[project]
+name = "shi-ci-qu-dict"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Tseing", email = "im.yczeng@foxmail.com"},
+]
+dependencies = [
+    "lxml>=5.2.1",
+    "tqdm>=4.66.4",
+]
+requires-python = "==3.9.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
