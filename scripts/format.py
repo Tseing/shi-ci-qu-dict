@@ -212,7 +212,7 @@ if __name__ == "__main__":
     entries = text.split("</>")
     entries.pop(entries.index(""))
 
-    f = open("../data/dumped_dict.txt", "a+", encoding="utf-8")
+    f = open("../data/dumped_dict.html", "a+", encoding="utf-8")
     skip_items = [
         "凝",
         "凝佇",
