@@ -212,8 +212,35 @@ if __name__ == "__main__":
     entries = text.split("</>")
     entries.pop(entries.index(""))
 
-    f = open("../data/dump.txt", "a+", encoding="utf-8")
-    skip_items = ["凝", "凝佇", "凝竚", "唱", "唱道", "常", "常好是", "常好道", "把似", "把如", "敍言"]
+    f = open("../data/dumped_dict.txt", "a+", encoding="utf-8")
+    skip_items = [
+        "凝",
+        "凝佇",
+        "凝竚",
+        "唱",
+        "唱道",
+        "常",
+        "常好是",
+        "常好道",
+        "把似",
+        "把如",
+        "-敍言",
+        "是事",
+        "是人",
+        "是物",
+        "是處",
+        "是（四）",
+        "暢",
+        "暢好是",
+        "暢好道",
+        "暢道",
+        "朅來（一）",
+        "消凝",
+        "竚凝",
+        "-跋",
+        "銷凝",
+        "雲陽"
+    ]
 
     for i, entry in enumerate(entries):
         split_itmes = entry.strip().split("\n")
