@@ -24,17 +24,11 @@ def find_def(s: str) -> Union[Tuple[str, Optional[str]], Literal[-1]]:
     else:
         pass
 
-    idx = s.find("。")
+    idx = s.find("。《")
     if -1 != idx:
-        return s[:idx], s[idx:]
+        return s[: idx + 1], s[idx + 1 :]
     else:
         pass
-
-    # idx = s.find("。《")
-    # if -1 != idx:
-    #     return s[: idx + 1], s[idx + 1 :]
-    # else:
-    #     pass
 
     idx = s.find("」《")
     if -1 != idx:
@@ -42,15 +36,21 @@ def find_def(s: str) -> Union[Tuple[str, Optional[str]], Literal[-1]]:
     else:
         pass
 
-    # idx = s.find("。又")
-    # if -1 != idx:
-    #     return s[: idx + 1], s[idx + 1 :]
-    # else:
-    #     pass
+    idx = s.find("。又")
+    if -1 != idx:
+        return s[: idx + 1], s[idx + 1 :]
+    else:
+        pass
 
     idx = s.find("」又")
     if -1 != idx:
         return s[: idx + 1], s[idx + 1 :]
+    else:
+        pass
+
+    idx = s.find("。")
+    if -1 != idx:
+        return s[:idx + 1], s[idx + 1:]
     else:
         return -1
 
