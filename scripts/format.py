@@ -1,7 +1,6 @@
-from typing import Literal, Optional, Tuple, Union, List
+from typing import List, Literal, Optional, Tuple, Union
 
 from lxml import etree
-from tqdm import tqdm
 
 
 def format_element(
@@ -243,15 +242,15 @@ if __name__ == "__main__":
     ]
 
     for i, entry in enumerate(entries):
-        split_itmes = entry.strip().split("\n")
-        key = split_itmes[0]
+        split_items = entry.strip().split("\n")
+        key = split_items[0]
 
         if key in skip_items:
             print(f"{i}: {key} is skipped.")
             continue
         else:
             print(f"{i}: {key}")
-        html_content = "\n".join(split_itmes[1:])
+        html_content = "\n".join(split_items[1:])
 
         tree = etree.HTML(html_content)
 
